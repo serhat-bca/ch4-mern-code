@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const baseURL = "http://localhost:3001/movies";
+const baseURL = "http://localhost:3001/api/movies";
 
 const getMovies = () => {
   return axios.get(baseURL).then((res) => res.data);
@@ -11,8 +11,7 @@ const addMovie = (movie) => {
 };
 
 const updateMovie = (movie) => {
-  return axios.put(`${baseURL}/${movie.id}`, movie)
-  .then((res) => res.data);
+  return axios.put(`${baseURL}/${movie.id}`, movie).then((res) => res.data);
 };
 
 export default { getMovies, addMovie, updateMovie };

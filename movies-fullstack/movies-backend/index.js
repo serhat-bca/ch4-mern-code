@@ -1,6 +1,8 @@
 const express = require("express");
 const app = express();
+const cors = require("cors");
 // middleware for parsing body into js object
+app.use(cors());
 app.use(express.json());
 
 const requestLogger = (req, res, next) => {
