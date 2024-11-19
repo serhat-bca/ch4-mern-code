@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const baseURL = "http://localhost:3001/api/movies";
+const baseURL = "/api/movies";
 
 const getMovies = () => {
   return axios.get(baseURL).then((res) => res.data);

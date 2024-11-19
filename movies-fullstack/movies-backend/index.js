@@ -4,6 +4,7 @@ const cors = require("cors");
 // middleware for parsing body into js object
 app.use(cors());
 app.use(express.json());
+app.use(express.static("dist"));
 
 const requestLogger = (req, res, next) => {
   console.log(`Request Method: ${req.method}`);
