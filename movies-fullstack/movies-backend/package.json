@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "buildfrontend":"rm -rf dist && cd ../movies-frontend && npm run build && cp -r dist ../movies-backend",
     "start": "node index.js",
     "dev": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
